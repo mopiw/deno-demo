@@ -2,6 +2,8 @@
 
 一个拥有页面渲染和数据库操作的简单测试用项目，增删查改也实现，数据验证搁置，因为本是测试用的。
 
+![](https://github.com/mopiw/deno-demo/blob/main/static/img/2020-11-24_02-56-56.png)
+
 **需要环境：**
 
 - Deno 1.5
