@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DENO DEMO - @mopiω</title>
+
+  <%- include('include/head.ejs') -%>
+</head>
+
+<body>
+  <%- include('include/header.ejs') -%>
+
+  <main id="main">
+    <section id="content">
+      <h2>查询所有 FindAll</h2>
+
+      <a class="button" href="/new">新增 CREATE+</a>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>PRICE ￥</th>
+            <th>OPERATION</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% data.games.forEach((game) => { %>
+          <tr>
+            <td><%= game.id %></td>
+            <td><%= game.name %></td>
+            <td><%= game.price %></td>
+            <td>
+              <a href="/edit/<%= game.id %>">update</a>
+              / 
+              <a href="/delete/<%= game.id %>">delete</a>
+            </td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <%- include('include/footer.ejs') -%>
+</body>
+
+</html>

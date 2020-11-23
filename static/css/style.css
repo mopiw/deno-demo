@@ -1,0 +1,249 @@
+:root {
+  --while: #fff;
+  --primary: #4445ab;
+  --bg-back: #edf2f2;
+  --bg: #fff;
+  --bg-light: #edf2f2;
+  --header: #252525;
+  --base: #444;
+  --base-aside: #5e5e5e;
+  --light: #717584;
+  --border: #c8cfe4;
+  --btn-bg: #edf2f2;
+  --hover: #353687;
+}
+
+:root[data-theme-mode="dark"] {
+  --primary: #8e8fff;
+  --bg-back: #171618;
+  --bg: #1e1e20;
+  --bg-light: #2a2a2e;
+  --header: #f7f7f9;
+  --base: #dedee4;
+  --base-aside: #b9b9c0;
+  --light: #a8a5b3;
+  --btn-bg: #33313c;
+  --border: #454449;
+  --hover: #b3b4ff;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 3.75rem 0 0 0;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--base);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--hover);
+}
+
+h2 {
+  position: relative;
+}
+
+h2::before {
+  position: absolute;
+  left: -20px;
+  content: "# ";
+  color: var(--primary);
+}
+
+input {
+  outline: none;
+}
+
+/* Header
+   ========================================================================== */
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+#header a {
+  color: var(--header);
+}
+
+#header a:hover {
+  color: var(--primary);
+}
+
+#header .inner {
+  display: flex;
+  margin: 0 auto;
+  padding: 0 3.75rem;
+  max-width: 1140px;
+  height: 3.75rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header .menu {
+  z-index: 5;
+}
+
+#header .menu ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  justify-content: center;
+
+  list-style: none;
+}
+
+#header .menu ul li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+#header .logo {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  right: 0;
+  height: 3.75rem;
+  z-index: 1;
+
+  font-size: 1.68rem;
+  font-weight: normal;
+}
+
+#header .logo a {
+  color: var(--base);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#header .logo a > span {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Main
+   ========================================================================== */
+#main {
+  padding: 4rem 0 3rem 0;
+}
+
+#content {
+  margin: 0 auto;
+  padding: 0 3.75rem;
+  max-width: 1140px;
+}
+
+#content .button {
+  display: inline-block;
+  margin: 1.5rem 0px;
+  padding: 0.8em 1.6em;
+  min-width: 7rem;
+  line-height: 1.45;
+
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0.3em;
+
+  transition: all 0.2s ease 0s;
+}
+
+#content .button:hover {
+  background: var(--hover);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+#content table {
+  margin: 0 0 5rem 0;
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+#content th,
+#content td {
+  padding: 0.6rem 1rem;
+
+  line-height: 1.6rem;
+  border: 1px solid var(--border);
+}
+
+#content th {
+  background: var(--bg-light);
+  color: var(--primary);
+  text-align: left;
+}
+
+#content input[type="submit"] {
+  margin: 1.5rem 0;
+  padding: 0.8em 1.6em;
+  min-width: 10rem;
+  line-height: 1.45;
+
+  background: var(--primary);
+  border-radius: 0.3em;
+  border: none;
+  color: var(--while);
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+#content input[type="submit"]:hover {
+  background: var(--hover);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+#content input[type="text"],
+#content input[type="number"] {
+  width: 100%;
+  border: none;
+}
+
+#content td input[type="button"] {
+  margin: 0;
+  padding: 0.3rem 0.5rem;
+  min-width: 0;
+
+  font-size: 0.75rem;
+}
+
+/* Footer
+   ========================================================================== */
+#footer {
+  padding: 0 0 2em 0;
+  margin: 1em 0 0 0;
+  clear: both;
+}
+
+#footer .inner {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1140px;
+  justify-content: space-between;
+}

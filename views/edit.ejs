@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新增 - DENO DEMO</title>
+
+  <%- include('include/head.ejs') -%>
+</head>
+
+<body>
+  <%- include('include/header.ejs') -%>
+
+  <main id="main">
+    <section id="content">
+      <h2><%= title %></h2>
+
+      <form action="/" method="post" enctype="multipart/form-data">
+
+      <input type="submit" value="提交 SUBMIT">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>PRICE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" name="id" autoFocus value="<%= data.id %>" readonly></td>
+            <td><input type="text" name="name" value="<%= data.name %>" autoFocus></td>
+            <td><input type="number" name="price" value="<%= data.price %>"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      </form>
+    </section>
+  </main>
+
+  <%- include('include/footer.ejs') -%>
+</body>
+
+</html>
