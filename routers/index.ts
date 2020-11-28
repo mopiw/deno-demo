@@ -6,7 +6,7 @@ const router = new Router();
 router.get("/", Controller.views)
   .get("/new", Controller.viewsNew)
   .get("/edit/:id", Controller.viewsUpdate)
-  .post("/", Controller.create)
+  .post("/", Controller.edit)
   .get("/delete/:id", Controller.delete);
 
 export default router;

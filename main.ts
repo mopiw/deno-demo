@@ -3,7 +3,7 @@ import {
   adapterFactory,
   engineFactory,
   viewEngine,
-} from "./mods/view-engine-1.4.2/mod.ts";
+} from "https://deno.land/x/view_engine/mod.ts";
 import { green } from "https://deno.land/std/fmt/colors.ts";
 import router from "./routers/index.ts";
 

@@ -33,7 +33,7 @@ class Controller {
   }
 
   // 新增
-  static async create(ctx: Context) {
+  static async edit(ctx: Context) {
     const str = JSON.stringify(await multiParser(ctx.request.serverRequest));
     const json = JSON.parse(str);
 
@@ -54,18 +54,6 @@ class Controller {
       await service.update(game);
     }
     ctx.response.redirect(REDIRECT_BACK, "/");
-  }
-
-  // 修改
-  static async update(ctx: Context) {
-    const body = await ctx.request.body().value;
-    let game: Game = {
-      id: body.id,
-      name: body.name,
-      price: body.price,
-    };
-
-    ctx.response.body = await service.update(game);
   }
 
   // 删除

@@ -4,10 +4,12 @@
 
 ![](https://github.com/mopiw/deno-demo/blob/main/static/img/2020-11-24_02-56-56.png)
 
-**需要环境：**
+**使用到的模块和环境：**
 
-- Deno 1.5
-- MySQL 5.7
+- [Deno](https://github.com/denoland/deno/releases/tag/v1.5.4) 1.5+
+- [MySQL](https://dev.mysql.com/downloads/installer/) 5.7+ (※ 注意 Deno 暂时不支持 MySQL 8.0+ 新加入的身份验证，但也提供老版本身份验证选择)
+- [oak](https://deno.land/x/oak) 6.3.2+
+- [view-engine](https://deno.land/x/view_engine) 1.4.5 (※ 老版本配合新版本 oak 会报错，说的就是你 1.3.0)
 
 ### SQL
 
@@ -20,7 +22,9 @@ CREATE TABLE `deno`.`Untitled`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 ```
 
-### RUN
+### 运行
+
+需要读/写/网络权限
 
 ```shell
 deno run --allow-net --allow-read --allow-write main.ts
